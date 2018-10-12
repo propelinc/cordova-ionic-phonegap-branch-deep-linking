@@ -99,7 +99,7 @@
   function correctPlistBlanks(obj) {
     for (const key in obj) {
       const val = obj[key];
-      if (!val) obj[key] = "";
+      if (!val && val !== false) obj[key] = "";
     }
 
     return obj;
